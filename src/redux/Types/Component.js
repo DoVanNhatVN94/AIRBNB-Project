@@ -1,0 +1,1 @@
+export const openComponent = "OPEN_MODAL"

@@ -1,0 +1,235 @@
+/** @format */
+
+.login-box {
+  margin: auto;
+  width: 100%;
+  max-width: 450px;
+  padding: 1.5em;
+
+  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); */
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.471);
+  margin-bottom: 30px;
+  border: none;
+  border: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -10px;
+  left: 0;
+  color: green;
+  font-size: 12px;
+}
+.login-box .user-box input:focus {
+  border: 1px solid lightseagreen;
+}
+
+.login-box .btn-register {
+  background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #212cc5 74%);
+  border: none;
+  z-index: 1;
+  font-size: 1em;
+  padding: 15px 15px;
+}
+.login-box .custom-btn {
+  letter-spacing: 4px;
+  color: #fff;
+  border-radius: 5px;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.login-box .btn-register:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.5;
+  border-radius: 5px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.login-box .btn-register:hover {
+  color: #fff;
+}
+.login-box .btn-register:hover:after {
+  top: 0;
+  height: 100%;
+}
+.login-box .btn-register:active {
+  top: 2px;
+}
+
+.login-box .btn_login button {
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 25px;
+  /* color: black; */
+  font-size: 1em;
+  text-decoration: none;
+
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border-radius: 5px;
+
+  transition: all 0.5s;
+}
+.login-box .btn_login button {
+  background: linear-gradient(rgb(177, 238, 222), rgb(204, 229, 184));
+}
+
+.login-box .btn_login button:hover {
+  background: rgb(34, 197, 34);
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.5), 0 0 25px rgba(0, 128, 0, 0.533),
+    0 0 25px rgba(0, 128, 0, 0.621), 0 0 25px rgba(0, 128, 0, 0.549);
+}
+
+.login-box .btn_login button span {
+  position: absolute;
+  display: block;
+}
+
+.login-box .btn_login button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, green);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box .btn_login button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, green);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box .btn_login button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, green);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box .btn_login button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, green);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .login-box .btn_login button {
+    font-size: 1em;
+  }
+  .login-box .btn-register {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .login-box .btn_login button {
+    font-size: 1.2em;
+  }
+  .login-box .btn-register {
+    font-size: 1.2em;
+  }
+}

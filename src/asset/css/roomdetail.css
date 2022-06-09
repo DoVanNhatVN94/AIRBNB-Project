@@ -1,0 +1,222 @@
+/** @format */
+.scrollable-container{
+  height: 100px;
+    overflow-y: scroll;
+}
+.cursor {
+  cursor: pointer;
+}
+.roomDetail {
+  width: 100%;
+  /* overflow: hidden; */
+ 
+}
+
+/* ROOMDETAIL HEAD*/
+.roomDetail button{
+  transition: all 1s;
+}
+.roomDetail .btn_submit {
+  background-image: linear-gradient(to right, #e233ff, #ff6b00);
+  border-radius: 5px;
+  color: white;
+  width: 200px;
+  transition: all 0.5s;
+}
+ 
+.roomDetail .btn_submit:hover,.roomDetail .btn_submit:focus {
+  background-image: linear-gradient(to right, #f14658, #dc2537);
+  color: #fff;
+  width: 250px;
+  /* box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.381); */
+}
+.roomDetail .btn_head{
+  color: #000;
+  border: 1px solid #000;
+  transition: all 0.25s;
+}
+.roomDetail .btn_head:hover,
+.roomDetail .btn_head:focus{
+  color: white;
+  background-color: #f91942;
+  border: none;
+}
+
+/* Button thêm chi tiet  */
+.roomDetail .custom-btn {
+  
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.roomDetail .btn_Add {
+  border: none;
+  color: #000;
+}
+.roomDetail .btn_Add:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.roomDetail .btn_Add:hover {
+  color: #000;
+}
+.roomDetail .btn_Add:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.roomDetail .btn_Add:active {
+  top: 2px;
+}
+
+.roomDetail .roomDetail_head_tittle,
+.roomDetail_book,
+.roomDetail_reviews {
+  padding: 0 20px;
+}
+
+.roomDetail .h_located {
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.filter {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn_success {
+  width: 50%;
+  height: 40px;
+}
+
+/* ROOMDETAIL END*/
+
+/* Responsive */
+/* Iphone*/
+
+
+@media screen and (min-width: 375px) {
+  .roomDetail .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .roomDetail .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .roomDetail {
+    font-size: 14px;
+    line-height: 1.4;
+    padding-top: 530px;
+    position: relative;
+  }
+  .roomDetail .flex_direction {
+    flex-direction: column;
+  }
+  .roomDetail .roomDetail_head_photos {
+    padding-top: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .roomDetail .roomDetail_head_photos_image {
+    height: 400px;
+    width: 100vw;
+
+    
+  }
+  .ant-picker-panel-container .ant-picker-panels {
+    display: inline-flex;
+    flex-wrap: wrap;
+    direction: ltr;
+    width: 300px;
+  }
+  .roomDetail .roomdetail_map{
+    padding-bottom: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.189);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.189);
+  }
+}
+/*Ipad*/
+@media screen and (min-width: 768px) {
+  .roomDetail {
+    padding-top: 550px;
+  }
+  .roomDetail .roomDetail_head_photos_image {
+    height: 500px;
+    width: 100vw;
+  }
+
+  .ant-picker-panel-container .ant-picker-panels {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    direction: ltr;
+    width: 100%;
+  }
+}
+
+/* Iphone ngang Ipad ngang*/
+@media screen and (min-width: 1024px) {
+  .roomDetail {
+    font-size: 16px;
+    padding-top: 140px;
+  }
+  .roomDetail .roomDetail_head_photos {
+    position: relative;
+    padding: 2em 0;
+  }
+  .roomDetail .roomDetail_head_photos_image {
+    height: 600px;
+    width: 100vw;
+
+    border-radius: 50px;
+  }
+  .roomDetail .form_book {
+    padding: 1.5em;
+    box-shadow: 0px 0px 5px 2px rgba(161, 156, 156, 0.596);
+    border-radius: 10px;
+  }
+  .roomDetail .roomDetail_book_booking{
+    position: relative;
+    width: 450px;
+  }
+  .roomDetail .roomDetail_book_booking .fixed{
+    position: fixed;
+    top: 105px;
+    width: 450px;
+  }
+  .roomDetail .roomDetail_book_booking .absolute{
+    position: absolute;
+    top: 325px;
+    width: 450px;
+  }
+
+}
+/*destop*/
+@media screen and (min-width: 1199px) {
+  .roomDetail {
+    font-size: 18px;
+  }
+}

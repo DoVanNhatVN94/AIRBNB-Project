@@ -1,0 +1,148 @@
+/** @format */
+.ant-input[disabled],
+.ant-select-disabled.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector,
+.ant-picker-input > input[disabled] {
+  color: rgba(0, 0, 0, 0.795);
+}
+
+/** button custom*/
+.UpdateND {
+  height: 48px;
+}
+.profile .custom-btn {
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.profile .btn_avatar_button,
+.profile .btn_addBook,
+.profile .btn_updateInfor {
+  border: none;
+  color: #000;
+}
+.profile .btn_avatar_button:after,
+.profile .btn_addBook:after,
+.profile .btn_updateInfor:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: 1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.profile .btn_avatar_button:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.profile .btn_updateInfor:hover ,
+.profile .btn_updateInfor:hover {
+  color: rgba(0, 0, 0, 0.748);
+}
+.profile .btn_avatar_button:hover:after,
+.profile .btn_addBook:hover:after,
+.profile .btn_updateInfor:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.profile .btn_avatar_button:active {
+  top: 2px;
+}
+/** button custom*/
+
+.profile {
+  width: 100%;
+  padding-bottom: 100px;
+}
+.profile .btn_avatar {
+  height: 50px;
+}
+.profile .btn_avatar_button {
+  display: none;
+}
+.profile .profife_status_avatar:hover .btn_avatar_button {
+  display: block;
+}
+
+.profile .profife_status_avatar {
+  padding: 50px 0 100px 0;
+  background-color: #eee7e3;
+}
+.profile .profife_status_content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.profile label {
+  cursor: pointer;
+  /* Style as you please, it will become the visible UI component. */
+}
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.ant-modal-content {
+  border-radius: 10px;
+}
+.ant-modal-header {
+  border-radius: 10px 10px 0 0;
+}
+
+@media screen and (min-width: 375px) {
+  .profile {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .profile .historyBooking_content {
+    display: block;
+  }
+  .profile .historyBooking_content_item {
+    max-width: 100%;
+    padding: 10%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile .historyBooking_content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .profile .historyBooking_content_item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px
+  }
+}
+@media screen and (min-width: 1024px) {
+  .profile {
+    font-size: 16px;
+  }
+  .profile .historyBooking_content_item {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .profile {
+    font-size: 20px;
+  }
+  
+}
